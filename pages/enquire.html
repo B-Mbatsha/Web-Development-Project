@@ -17,8 +17,90 @@
     </header>
     <main> <!--enquire page main -->
     <section> 
-        
+        <h1 style = "text-align: center;" >Enquiry Form</h1>
+        <p style = "text-align: center;" >Please fill out the form below to submit your enquiry. We will get back to you as soon as possible.</p>
+        <div class = "enquiry-form">
+            <div class = "form-card">
+                <div class = "form-image"></div>
+                <form action = "mailto:" method = "post" enctype = "text/plain">
+                    <section>
+                    <h3>Personal Details</h3>
+                    <label for = "name">Name:</label>
+                    <input type = "text" id = "name" placeholder = "Enter your name" required>
+                    <br><br>
 
+                    <label for = "email">Email Address:</label>
+                    <input type = "email" id = "email" placeholder = "Enter your email" required>
+                    <br><br>
+
+                    <label for = "phone">Customer Phone Number:</label>
+                    <input type = "text" id = "phone" placeholder = "Enter your phone number" required>
+                    <br><br>
+                    </section>
+
+                    <section>
+                    <h3>Cake Details</h3>
+                    <label for = "cake-type">Cake Type:</label>
+                    <select id = "cake-type" name = "cake-type" required>
+                        <option value = "birthday">Birthday Cake</option>
+                        <option value = "wedding">Wedding Cake</option>
+                        <option value = "custom">Custom Cake</option>
+                        <option value = "cupcake">Cup Cake</option>
+                    </select>
+                    <br><br>
+
+                    <label for = "cake-flavour">Cake Flavour:</label>
+                    <input type = "text" id = "cake-flavour" placeholder = "Enter the cake flavour" required>
+                    <br><br>
+
+                    <label for = "cake-size">Cake Size:</label>
+                    <select id = "cake-size" name = "cake-size" required>
+                        <option value = "small">Small</option>
+                        <option value = "medium">Medium</option>
+                        <option value = "large">Large</option>
+                    </select>
+                    <br><br>
+
+                    <label for = "number-of-cakes">Number of Cakes:</label>
+                    <input type = "number" min="0" id = "number-of-cakes" placeholder = "Enter the number of cakes" required>
+                    <br><br>
+
+                    <label for = "occasion">Occasion:</label>
+                    <select id = "occasion" name = "occasion" required>
+                        <option value = "birthday">Birthday</option>
+                        <option value = "wedding">Wedding</option>
+                        <option value = "anniversary">Anniversary</option>
+                        <option value = "baby-shower">Baby Shower</option>
+                        <option value = "graduation">Graduation</option>
+                        <option value = "other">Other</option>
+                    </select>   
+                    <br><br>
+                    </section>
+
+                    <section>
+                    <h3>Timing</h3>
+                    <label for = "pickup-date">Pickup/Delivery Date:</label>
+                    <input type = "date" id = "pickup-date" required>
+                    <br><br>
+
+                    <label for = "pickup-or-delivery">Pickup or Delivery:</label>
+                    <select id = "pickup-or-delivery" name = "pickup-or-delivery" required>
+                        <option value = "pickup">Pickup</option>
+                        <option value = "delivery">Delivery</option>
+                    </select>
+                    <br><br>
+                    </section>
+
+                    <section>
+                    <h3>Additional Information</h3>
+                    <label for = "message">Additional Details:</label>
+                    <textarea id = "message" name = "message" placeholder = "Enter your message" rows = "4" required></textarea><br><br>
+                    </section>
+
+                    <input type = "submit" value = "Submit">
+                </form>
+            </div>
+        </div>
     </section>    
     </main>
 </body>
