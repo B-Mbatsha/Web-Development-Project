@@ -3,31 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+    <link rel = "stylesheet" href = "../assets/css/enquiriesstyle.css">
     <title>Crumbs & Co | Enquire</title>
 </head>
 <body>
+    <div class = "start-section">
+        <div class = "header-image">
     <header>
         <nav>
-        <a href = "../index.html" >HOME</a>
-        <a href = "./products.html" >PRODUCTS</a>
-         <a href = "./enquire.html" >ENQUIRIES</a>
-        <a href = "./about.html" >ABOUT US</a>
-        <a href = "./services.html" >SERVICES</a>
+            <div class="logo-group">
+        <img src="../assets/images/Screenshot 2026-08-13 140642.png" alt="Crumb&Co logo" class="logo-image">
+        <span class = "bakery-name">Crumb&Co.</span>
+    </div>
+            <div class = "nav-links">
+        <a href = "../index.html" >HOME</a>|
+        <a href = "./products.html" >PRODUCTS</a>|
+         <a href = "./enquire.html" >ENQUIRIES</a>|
+        <a href = "./about.html" >ABOUT US</a>|
+        <a href = "./services.html" >SERVICES</a>|
         <a href = "./contact.html" >CONTACT</a>
-        </nav>
+         </div>
+    </nav>
     </header>
+
     <main> <!--enquire page main -->
-    <section> 
-        <h1 style = "text-align: center;" >Enquiry Form</h1>
-        <p style = "text-align: center;" >Please fill out the form below to submit your enquiry. We will get back to you as soon as possible.</p>
+      <div class = "header-content">
+        <h1>Enquiry Form</h1>
+        <p>
+            Please fill out the form below to submit your enquiry. We will get back to you as soon as possible.
+        </p>
+         </div>
+    </main>
+    </div>
+</div>
+<br><br>
+
         <div class = "enquiry-form">
-            <div class = "form-card">
-                <div class = "form-image"></div>
                 <form action = "mailto:" method = "post" enctype = "text/plain">
-                    <section>
+                    <div class = "personal-details">
                     <h3>Personal Details</h3>
                     <label for = "name">Name:</label>
                     <input type = "text" id = "name" placeholder = "Enter your name" required>
+
                     <br><br>
 
                     <label for = "email">Email Address:</label>
@@ -37,9 +55,9 @@
                     <label for = "phone">Customer Phone Number:</label>
                     <input type = "text" id = "phone" placeholder = "Enter your phone number" required>
                     <br><br>
-                    </section>
+                    </div>
 
-                    <section>
+                    <div class = "cake-details">
                     <h3>Cake Details</h3>
                     <label for = "cake-type">Cake Type:</label>
                     <select id = "cake-type" name = "cake-type" required>
@@ -76,9 +94,9 @@
                         <option value = "other">Other</option>
                     </select>   
                     <br><br>
-                    </section>
+                    </div>
 
-                    <section>
+                    <div class ="pickup-delivery-time">
                     <h3>Timing</h3>
                     <label for = "pickup-date">Pickup/Delivery Date:</label>
                     <input type = "date" id = "pickup-date" required>
@@ -90,19 +108,16 @@
                         <option value = "delivery">Delivery</option>
                     </select>
                     <br><br>
-                    </section>
+                    </div>
 
-                    <section>
+                    <div class = "additional-info">
                     <h3>Additional Information</h3>
                     <label for = "message">Additional Details:</label>
                     <textarea id = "message" name = "message" placeholder = "Enter your message" rows = "4" required></textarea><br><br>
-                    </section>
+                    </div>
 
-                    <input type = "submit" value = "Submit">
+                    <input type = "submit" value = "Submit" class ="submit">
                 </form>
             </div>
-        </div>
-    </section>    
-    </main>
 </body>
 </html>
