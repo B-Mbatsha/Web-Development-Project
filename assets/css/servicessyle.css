@@ -1,0 +1,105 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+:root {
+  --heritage-olive : #6B7040;
+  --burnt-terracotta : #B5502F;
+  --alabaster-cream : #EFE7DA;
+  --soft-oatmeal : #E4b5BE;
+  --honey-gold : #D9A32B;
+  --warm-esspresso : #4A3428;
+  --Dark-brown : #2b1d17;
+}
+
+body {
+  margin: 0;
+  background-color: #f4ede3; 
+}
+
+.header-image {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/1050886894288883578.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 350px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-image {
+  width: 40px;
+  height: auto;
+  margin: 0;
+}
+
+.bakery-name {
+  color: burlywood;
+}
+
+.nav-links {
+  margin-left: auto; 
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: burlywood;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #B5502F;
+}
+.header-content{
+  border-radius: 30px;
+  border: 3px solid burlywood;
+  padding: 2px;
+  width: 300px;
+  text-align: center;
+    transform: translateX(520px) translateY(60px);
+}
+.services-container{
+   border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;          /* Makes form size match text styling cleanly */
+  margin: 40px auto;         /* Clean automatic centering block placement */
+  box-sizing: border-box;
+  background-color: #ffffff; 
+  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/39406565484307674.jpg"); ;
+  transform: translateX(-48px);
+  color: burlywood;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+@media (max-width: 900px) {
+  .top-row-content,
+  .bottom-row-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-row-content .hero-section-text-center {
+    text-align: center;
+    justify-content: center;
+    padding: 0 24px;
+  }
+}

@@ -1,0 +1,505 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+  /* THE FIX: This cuts off and hides any accidental horizontal layout spillages */
+  overflow-x: hidden; 
+}
+
+:root{
+--heritage-olive : #6B7040;
+--burnt-terracotta : #B5502F;
+--alabaster-cream : #EFE7DA;
+--soft-oatmeal : #E4b5BE;
+--honey-gold : #D9A32B;
+--warm-esspresso : #4A3428;
+--Dark-brown : #2b1d17;
+}
+
+body {
+    margin: 0;
+    background-color: var(--warm-esspresso); /* dark brown, close to your cake image tone */
+}
+.header-image {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/nygi-OSSkMJYU8Wc-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-group{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.bakery-name{
+  color:burlywood ;
+}
+.logo-image{
+    width: 40px;
+    height: auto;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+.nav-links {
+    margin-left: auto; /* pushes the whole link group to the far right */
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color:burlywood;
+    text-decoration:none;
+}
+
+.nav-links :hover{
+  color: #B5502F;
+}
+
+.header-content p{
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  border-right: 1px solid rgba(255, 255, 255, 0.7);
+  border-left-width: 4px;
+  border-right-width: 4px;
+  border-color: burlywood;
+
+  padding-left: 10px;
+  padding-right: 6px;
+  max-width: 600px;
+}
+.heading-welcome{
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-color: burlywood;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width: 30px;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  transform: translateX(645px);
+}
+.heading{
+  writing-mode: vertical-rl; /* Rotates text 90 degrees clockwise */
+  transform: rotate(180deg); /* Flips it to read top-to-bottom */
+  margin: 0
+}
+
+.heading-content{
+   border-left: 1px solid rgba(255, 255, 255, 0.7);
+  border-right: 1px solid rgba(255, 255, 255, 0.7);
+  border-left-width: 4px;
+  border-right-width: 4px;
+  border-color: burlywood; 
+
+  padding-left: 5px;
+  padding-right: 4px;
+  max-width: 800px;
+  margin-left: auto;
+
+  transform: translate(20);
+}
+
+.btn-enquire {
+  display: inline-block;
+
+  padding: 8px 8px;
+  font-size:small;
+  background-color:#f5ede3;
+  color:wheat;
+  text-decoration: none;
+  border-radius:100px;
+
+  transition: background-color 0.3 ease;
+  transform: translateX(20px);
+
+}
+.btn-contact{
+ display: inline-block;
+
+  padding: 8px 8px;
+  font-size:small;
+  background-color:#f5ede3;
+  color:wheat;
+  text-decoration: none;
+  border-radius:100px;
+
+  transition: background-color 0.3 ease;
+  transform: translateX(40px);
+}
+
+.heading-buttons :hover{
+  background-color: var(--Dark-brown);
+  color: #B5502F;
+
+}
+.container {
+  background-color: #f4ede3;
+  color: #3a2e26;
+  font-family: Georgia, 'Times New Roman', serif;
+  padding: 60px 40px;
+}
+
+.top-row-content {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  align-items: stretch;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.hero-section-text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+.image-container .cake1{
+   border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 5px;
+  width: 1000px;
+}
+.image-container .cake2{
+   border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 5px;
+  width: 1000px;
+}
+.image-container {
+   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.image-container :hover{
+  transform: scale(1.1);
+}
+.bottom-row-image-container .cake3{
+   border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 5px;
+  width: 1000px;
+}
+.bottom-row-image-container .cake4{
+   border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 5px;
+  width: 1000px;
+}
+.bottom-row-image-container .cake5{
+   border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 5px;
+  width: 1000px;
+}
+
+.heading-middle-text h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.5px;
+}
+
+.heading-middle-text p {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  color: #6b5d52;
+  margin: 0 0 20px 0;
+}
+.cake3{
+  Transform: translatex(107px);
+}
+.cake4{
+  Transform: translatex(280px);
+}
+.cake5{
+  Transform: translatex(140px);
+}
+.bottom-row-text{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translatex(180px);
+  max-width: 1000px;
+}
+.btn-container{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.bottom-row-text{
+ border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 20px;
+  width: 1000px;
+}
+.ordernow-btn{
+ display: inline-block;
+
+  padding: 8px 8px;
+  font-size:small;
+  background-color: var(--Dark-brown);
+  color:wheat;
+  text-decoration: none;
+  border-radius:100px;
+
+  transition: background-color 0.3 ease;
+}
+
+.ordernow-btn:hover{
+  background-color: var(--heritage-olive);
+  color: var(--Honey-gold);
+
+  transform: translateY(-3px);   
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.products-section{
+  margin: 0;
+  padding-top: 60px;
+   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/8796161764033486.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-height: 3550px;
+}
+.products-section h1{
+   border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 20px;
+  width: 500px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  
+  margin: 0 auto;
+}
+.product-data-first-row{
+  transform: translateX(80px);
+  padding-bottom: 20px;
+}
+
+.fun-facts-section{
+   padding: 20px; 
+}
+.fun-facts-border{
+  border-radius: 25px;
+  border: 3px solid burlywood;
+ max-width: 450px; 
+  
+  padding: 24px; 
+  
+  margin: 0 auto; 
+}
+.crumb-fun-facts{
+  padding: 20px;
+}
+.fun-facts-second-border{
+  border-radius: 25px;
+  border: 3px solid burlywood;
+ max-width: 450px; 
+  
+  padding: 24px; 
+  
+  margin: 0 auto; 
+}
+.product-data-first-row .customcakes-btn{
+display: inline-block;
+
+  padding: 8px 8px;
+  font-size:small;
+  background-color: #6b5d52 ;
+  color: var(--Dark-brown);
+  text-decoration: none;
+  border-radius:100px;
+
+  transition: background-color 0.3 ease;
+}
+.product-data-first-row .customcakes-btn:hover{
+   background-color: var(--heritage-olive);     /* Changes to a rich terracotta orange */
+  color: #EFE7DA;                /* Changes text to a bright cream */
+  
+  /* Physics effects: lifts the button slightly up and adds a shadow */
+  transform: translateY(-3px);   
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+.first-bottom-content{
+  transform: translateX(50px);
+}
+.bottom-text-facts-container{
+  max-width: 600px;
+  transform: translateX(700px) translateY(-500px);
+  border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 20px;
+  width: 1000px;
+}
+.second-bottom-content{
+  transform: translateX(50px);
+}
+.image-content{
+  transform: translateY(-20px);
+}
+.bottom-text-second-facts-container{
+   max-width: 600px;
+  transform: translateX(700px) translateY(-500px);
+  border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 20px;
+  width: 1000px;
+}
+.product-data-second-row .weddingcakes-btn{
+  display: inline-block;
+
+  padding: 8px 8px;
+  font-size:small;
+  background-color: #6b5d52 ;
+  color: var(--Dark-brown);
+  text-decoration: none;
+  border-radius:100px;
+
+  transition: background-color 0.3 ease;
+}
+.product-data-bottom .birthdaycakes-btn{
+  display: inline-block;
+
+  padding: 8px 8px;
+  font-size:small;
+  background-color: #6b5d52 ;
+  color: var(--Dark-brown);
+  text-decoration: none;
+  border-radius:100px;
+
+  transition: background-color 0.3 ease;
+}
+.image-content .cupcakes-btn{
+  display: inline-block;
+
+  padding: 8px 8px;
+  font-size:small;
+  background-color: #6b5d52 ;
+  color: var(--Dark-brown);
+  text-decoration: none;
+  border-radius:100px;
+
+  transition: background-color 0.3 ease;
+}
+.product-data-bottom .birthdaycakes-btn:hover,
+.product-data-second-row .weddingcakes-btn:hover,
+.image-content .cupcakes-btn:hover{
+   background-color: var(--heritage-olive);     /* Changes to a rich terracotta orange */
+  color: #EFE7DA;                /* Changes text to a bright cream */
+  
+  /* Physics effects: lifts the button slightly up and adds a shadow */
+  transform: translateY(-3px);   
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+.footer-content{
+  padding-top: 1px;
+  background-color: #f4ede3;
+   color: #6b5d52;
+   max-height: 340px;
+}
+.reviews{
+  transform: translateX(20px);
+  max-width: 500px;
+}
+.reviews .stars {
+  border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 10px 20px; /* Reduced vertical padding for a cleaner look */
+  
+  /* THE MAGIC CODES: Shrinks the box tight around the stars */
+  display: inline-block; 
+  width: fit-content; 
+  
+  /* Flexbox lines ensure stars align in one straight horizontal row inside */
+  display: inline-flex;
+}
+.contact{
+  transform: translateX(700px) translateY(-280px);
+}
+.contact .btn{
+ display: inline-block;
+
+  padding: 8px 8px;
+  font-size:small;
+  background-color: var(--Dark-brown);
+  color:wheat;
+  text-decoration: none;
+  border-radius:100px;
+
+  transition: background-color 0.3 ease;
+}
+
+
+.enquiries{
+    transform: translateX(1000px) translateY(-379px);
+}
+.enquiries .btn{
+ display: inline-block;
+
+  padding: 8px 8px;
+  font-size:small;
+  background-color: var(--Dark-brown);
+  color:wheat;
+  text-decoration: none;
+  border-radius:100px;
+
+  transition: background-color 0.3 ease;
+}
+
+.contact .btn:hover,
+.enquiries .btn:hover{
+
+ background-color: var(--heritage-olive);     /* Changes to a rich terracotta orange */
+  color: #EFE7DA;                /* Changes text to a bright cream */
+  
+  /* Physics effects: lifts the button slightly up and adds a shadow */
+  transform: translateY(-3px);   
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .top-row-content,
+  .bottom-row-content {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-row-content .hero-section-text-center {
+    text-align: center;
+    justify-content: center;
+    padding: 0 24px;
+  }
+}
+
+
+
+
+

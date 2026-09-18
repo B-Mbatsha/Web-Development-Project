@@ -1,0 +1,211 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+  /* THE FIX: This cuts off and hides any accidental horizontal layout spillages */
+  overflow-x: hidden; 
+}
+
+:root{
+--heritage-olive : #6B7040;
+--burnt-terracotta : #B5502F;
+--alabaster-cream : #EFE7DA;
+--soft-oatmeal : #E4b5BE;
+--honey-gold : #D9A32B;
+--warm-esspresso : #4A3428;
+--Dark-brown : #2b1d17;
+}
+
+body {
+    margin: 0;
+    background-color:#f4ede3;; /* dark brown, close to your cake image tone */
+}
+.header-image {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/638666790934842203.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 450px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.logo-group{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.bakery-name{
+  color:burlywood ;
+}
+.logo-image{
+    width: 40px;
+    height: auto;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+.nav-links {
+    margin-left: auto; /* pushes the whole link group to the far right */
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color:burlywood;
+    text-decoration:none;
+}
+
+.nav-links :hover{
+  color: #B5502F;
+}
+/* Style your custom cake symbol */
+.heading-symbol {
+    width: 50px;              
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;    
+    margin-right: 8px;         
+    filter: brightness(0) saturate(100%) invert(81%) sepia(35%) saturate(718%) hue-rotate(331deg) brightness(92%) contrast(89%);
+    transform: translateX(110px);
+}
+
+
+.header-content{
+    max-width: 400px;
+     align-items: center;       /* Centers every product row horizontally */
+    margin: 0 auto;
+}
+.header-content h1{
+    transform: translateX(80px);
+}
+.header-content p {
+     border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 20px;
+  width: 500px;
+  text-align: center;
+    transform: translateX(-120px)
+}
+
+.all-products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.product-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       
+  width: 100%;
+  max-width: 1200px;         
+  margin-bottom: 60px;     
+}
+
+table.birthday-cakes {
+  margin: 0 auto 20px auto;  
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+.first-cake-row, 
+.second-cake-row {
+  text-align: center;
+}
+
+
+.product-section {
+  text-align: center;       
+  margin-bottom: 20px;
+}
+
+
+.birthday-cakes img,
+.product-section img {
+  border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 5px;
+  width: 200px;             
+  height: auto;
+  margin: 10px;
+  display: inline-block;
+}
+
+
+.content-isolation-box {
+  text-align: center;
+  transform: translateX(20px);
+  max-width: 600px;          
+  color: burlywood;
+  font-family: Georgia, 'Times New Roman', serif;
+  
+}
+
+.btn{
+    display: inline-block;
+
+  padding: 8px 8px;
+  font-size:small;
+  background-color: var(--Dark-brown);
+  color:wheat;
+  text-decoration: none;
+  border-radius:100px;
+
+  transition: background-color 0.3 ease;
+}
+.btn:hover{
+    background-color: var(--heritage-olive);     /* Changes to a rich terracotta orange */
+  color: #EFE7DA;                /* Changes text to a bright cream */
+  
+  /* Physics effects: lifts the button slightly up and adds a shadow */
+  transform: translateY(-3px);   
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+.wedding-product-container{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/chocolate\ with\ nuts.jpg");
+    
+}
+.cupcakes-product-setion{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/281543718152405.jpg");
+    padding-bottom: 1px;
+}
+.wedding-product-container,
+.custom-product-section,
+.cupcakes-product-setion{
+      color: burlywood;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.wedding-product-container .button-section,
+.custom-product-section .button-section,
+.cupcakes-product-setion .button-section{
+    border-radius: 35px;
+  border: 3px solid burlywood;
+  padding: 5px;
+  width: 500px;              /* Explicit uniform image widths matching your mockups */
+  height: auto;
+  margin: 10px;
+  display: inline-block;
+    transform: translateX(-35px);
+}
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  
+  /* 1. Reset standard navigation layout structure */
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}

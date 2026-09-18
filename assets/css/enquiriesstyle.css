@@ -1,0 +1,162 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+:root {
+  --heritage-olive : #6B7040;
+  --burnt-terracotta : #B5502F;
+  --alabaster-cream : #EFE7DA;
+  --soft-oatmeal : #E4b5BE;
+  --honey-gold : #D9A32B;
+  --warm-esspresso : #4A3428;
+  --Dark-brown : #2b1d17;
+}
+
+body {
+  margin: 0;
+  background-color: #f4ede3; 
+}
+
+/* ==========================================
+   HEADER & NAVIGATION LAYOUT
+   ========================================== */
+.header-image {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/🍂.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 450px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-image {
+  width: 40px;
+  height: auto;
+  margin: 0;
+}
+
+.bakery-name {
+  color: burlywood;
+}
+
+.nav-links {
+  margin-left: auto; 
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: burlywood;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #B5502F;
+}
+
+/* ==========================================
+   CENTERED CONTENT AREA LAYOUT
+   ========================================== */
+.header-content {
+  max-width: 600px;
+  margin: 40px auto 0 auto;  /* Centers the header column block onto the page completely */
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Centers child elements inside horizontally */
+  text-align: center;
+}
+
+.header-content h1 {
+  color: #4A3428;
+  margin: 15px 0 10px 0;
+}
+
+.header-content p {
+  border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 20px;
+  width: 100%;               /* Lets it flow relative to the max-width container */
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   ENQUIRY FORM LAYOUT
+   ========================================== */
+.enquiry-form {
+  border-radius: 25px;
+  border: 3px solid burlywood;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;          /* Makes form size match text styling cleanly */
+  margin: 40px auto;         /* Clean automatic centering block placement */
+  box-sizing: border-box;
+  background-color: #ffffff; /* Gives clean form contrast contrast background */
+}
+.enquiry-form{
+ background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/🥐.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 450px;
+}
+
+/* Fixes broken selectors at the footer */
+.personal-details,
+.cake-details,
+.pickup-delivery-time,
+.additional-info {
+  margin-bottom: 20px;
+  text-align: left; 
+   color: burlywood;
+  font-family: Georgia, 'Times New Roman', serif;         /* Keeps individual labels reading clean */
+}
+.submit{
+     border-radius: 35px;
+  border: 2px solid burlywood;
+  padding: 2px;
+  width: 100px;              /* Explicit uniform image widths matching your mockups */
+  height: auto;
+  margin: 10px;
+  display: inline-block;
+}
+.submit:hover{
+       background-color: var(--heritage-olive);     /* Changes to a rich terracotta orange */
+  color: #EFE7DA;                /* Changes text to a bright cream */
+  
+  /* Physics effects: lifts the button slightly up and adds a shadow */
+  transform: translateY(-3px);   
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================== */
+@media (max-width: 900px) {
+
+  /* 1. Break navigation down to stack cleanly */
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
