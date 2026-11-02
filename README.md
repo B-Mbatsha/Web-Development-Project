@@ -150,7 +150,7 @@ Part1
 Reference list
 W3Schools, 2026. HTML tutorial. [online] Available at: <https://www.w3schools.com/html/> [Accessed 13 August 2026].
 =============================================================================================================================
-##Part 2
+# Part 2
 Changelog
 Design Tokens, Variables & Global Reset
 • Fixed Token Consistency: Audited root variables and fixed formatting bugs (e.g., standardizing custom properties like --Dark-brown to follow clean naming conventions).
@@ -188,7 +188,7 @@ Part2
 Reference list
 W3Schools, 2026. HTML tutorial. [online] Available at: <https://www.w3schools.com/html/> [Accessed 18 September 2026].
 =============================================================================================================================
-##Part 3
+# Part 3
 Changelog
 JavaScript Changelog – Crumb & Co.
 Navigation
