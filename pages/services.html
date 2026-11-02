@@ -3,73 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Custom cake design, event cakes, in-store pickup and rush orders from Crumb &amp; Co. in Cape Town.">
+    <meta property="og:title" content="Services | Crumb &amp; Co. Cape Town">
+    <meta property="og:description" content="Custom cake design, event cakes, in-store pickup and rush orders from Crumb &amp; Co. in Cape Town.">
+    <meta property="og:type" content="website">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
-    <link rel = "stylesheet" href = "../assets/css/servicessyle.css">
-    <title>Crumbs & Co | Services</title>
+    <link rel = "stylesheet" href = "../assets/css/style.css">
+    <title>Services | Crumb &amp; Co. Cape Town</title>
 </head>
-<body>
-     <div class = "start-section">
-        <div class = "header-image">
+<body class = "Services-body">
+     <div class = "Services-start-section">
+        <div class = "Services-header-image">
     <header>
         <nav>
             <div class="logo-group">
         <img src="../assets/images/Screenshot 2026-08-13 140642.png" alt="Crumb&Co logo" class="logo-image">
         <span class = "bakery-name">Crumb&Co.</span>
     </div>
-            <div class = "nav-links">
-        <a href = "../index.html" >HOME</a>|
-        <a href = "./about.html" >ABOUT US</a>|
-        <a href = "./products.html" >PRODUCTS</a>|
-         <a href = "./enquire.html" >ENQUIRIES</a>|
-        <a href = "./services.html" >SERVICES</a>|
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <div class="nav-links" id="nav-links">
+        <a href = "../index.html" >HOME</a>
+        <a href = "./products.html" >PRODUCTS</a>
+         <a href = "./enquire.html" >ENQUIRIES</a>
+        <a href = "./about.html" >ABOUT US</a>
+        <a href = "./services.html" >SERVICES</a>
         <a href = "./contact.html" >CONTACT</a>
          </div>
     </nav>
     </header>
 
     <main> <!--enquire page main -->
-      <div class = "header-content">
-        <h3>Services</h3>
+      <div class = "Services-header-content">
+        <h1>Services</h1>
          </div>
     </main>
     </div>
 </div>
 <br><br>
         <div class = "services-container">
+                <div class="filter-bar" role="search">
+                    <input type="search" id="search-input" placeholder="Search our services…" aria-label="Search services">
+                    <select id="sort-select" aria-label="Sort services"><option value="default">Default order</option><option value="az">Name A–Z</option><option value="za">Name Z–A</option></select>
+                </div>
+                <p id="no-results" class="no-results" role="status" hidden>No services match your search.</p>
                 <ul>
-                    <li>
+                    <li class="filter-item">
                         Custom Cake Design Consultation
                         <p>We specialize in creating custom cake designs that are tailored to your specific needs and preferences.</p>
                         <p>Work with Brian to bring your vision to life!</p>
                     </li>
 
-                    <li>
+                    <li class="filter-item">
                         Delivery Services
                         <p>Coming Soon</p>
                     </li>
 
-                    <li>
+                    <li class="filter-item">
                         In-Store Pickup
                         <p>Prefer to collect your order yourself? Pick up your cake directly from our Cape Town bakery.</p>
                     </li>
 
-                    <li>
+                    <li class="filter-item">
                         Event/Occasion Cakes
                         <p>From weddings to birthdays, baby showers to anniversaries — we craft cakes tailored to your special occasion.</p>
                     </li>
 
-                    <li>
+                    <li class="filter-item">
                         Cake Tasting Sessions
                         <p>Book a tasting session to sample flavors before committing to your custom cake order.</p>
                         <p>This feature will be available soon, so stay tuned!</p>
                     </li>
 
-                    <li>
+                    <li class="filter-item">
                         Rush Orders
                         <p>Need a cake in a hurry? We offer rush order services for last-minute celebrations.</p>
                     </li>
 
                 </ul>
             </div>
+<script src="../assets/js/main.js" defer></script>
 </body>
 </html>

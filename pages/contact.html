@@ -3,32 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Crumb &amp; Co. at 14 Kloof Street, Gardens, Cape Town. Phone, email, opening hours, map and message form.">
+    <meta property="og:title" content="Contact Us | Crumb &amp; Co. Cape Town">
+    <meta property="og:description" content="Contact Crumb &amp; Co. at 14 Kloof Street, Gardens, Cape Town. Phone, email, opening hours, map and message form.">
+    <meta property="og:type" content="website">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
-    <link rel = "stylesheet" href = "../assets/css/contactstyle.css">
-    <title>Crumbs & Co | Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+    <link rel = "stylesheet" href = "../assets/css/style.css">
+    <title>Contact Us | Crumb &amp; Co. Cape Town</title>
 </head>
-<body>
-    <div class = "start-section">
-        <div class = "header-image">
+<body class = "Contact-body">
+    <div class = "Contact-start-section">
+        <div class = "Contact-header-image">
     <header>
         <nav>
             <div class="logo-group">
         <img src="../assets/images/Screenshot 2026-08-13 140642.png" alt="Crumb&Co logo" class="logo-image">
         <span class = "bakery-name">Crumb&Co.</span>
     </div>
-            <div class = "nav-links">
-        <a href = "../index.html" >HOME</a>|
-        <a href = "./about.html" >ABOUT US</a>|
-        <a href = "./products.html" >PRODUCTS</a>|
-         <a href = "./enquire.html" >ENQUIRIES</a>|
-        <a href = "./services.html" >SERVICES</a>|
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <div class="nav-links" id="nav-links">
+        <a href = "../index.html" >HOME</a>
+        <a href = "./products.html" >PRODUCTS</a>
+         <a href = "./enquire.html" >ENQUIRIES</a>
+        <a href = "./about.html" >ABOUT US</a>
+        <a href = "./services.html" >SERVICES</a>
         <a href = "./contact.html" >CONTACT</a>
          </div>
     </nav>
     </header>
 
-    <main> <!--enquire page main -->
-      <div class = "header-content">
+    <main> 
+      <div class = "Contact-header-content">
         <h1>Contact Us</h1>
          </div>
     </main>
@@ -38,13 +44,12 @@
 
         <div class = "contact-paragraph">      
           <p>
-            "Have a question or need help planning your perfect cake? Get in touch with Crumb & Co. — we're always happy to hear from you.""
+            Have a question or need help planning your perfect cake? Get in touch with Crumb & Co. — we're always happy to hear from you.
           </p>  
           <p>
-            "For more information on how to contact us, please scroll down below."
+            For more information on how to contact us, please scroll down below.
           </p>
           </div>
-        </div>
         <br>
 
     <div class = "contact-info">
@@ -56,25 +61,67 @@
        
     </div>
     <br>
+     <div class = "contact-form">
+
+            <form action="mailto:info@crumbandco.com" method="post" enctype="text/plain" id="contact-form" novalidate>
+            <div class="Customer-details">
+                <h3>Send Us a Message</h3>
+            <div class="field">
+                <label for="name">Full Name *</label>
+                <input id="name" name="name" type="text" required minlength="2" maxlength="60" autocomplete="name" data-rule="name">
+                <span class="error-msg" aria-live="polite"></span>
+            </div>
+            <div class="field">
+                <label for="email">Email Address *</label>
+                <input id="email" name="email" type="email" required autocomplete="email" data-rule="email">
+                <span class="error-msg" aria-live="polite"></span>
+            </div>
+            <div class="field">
+                <label for="phone">Phone Number (optional)</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 021 123 4567" data-rule="phone">
+                <span class="error-msg" aria-live="polite"></span>
+            </div>
+            <div class="field">
+                <label for="subject">Reason for Contact</label>
+                <select id="subject" name="subject" required data-rule=""><option value="general">General question</option><option value="custom">Custom cake</option><option value="wedding">Wedding cake</option><option value="birthday">Birthday cake</option><option value="cupcake">Cupcake</option><option value="feedback">Feedback</option><option value="other">Other</option></select>
+                <span class="error-msg" aria-live="polite"></span>
+            </div>
+            <div class="field">
+                <label for="message">Your Message *</label>
+                <textarea id="message" name="message" rows="5" required minlength="10" maxlength="1000" data-rule="message"></textarea>
+                <span class="error-msg" aria-live="polite"></span>
+            </div>
+            </div>
+            <button type="submit" class="Send-Message">Send Message</button>
+            <div id="contact-response" class="form-response" role="status" aria-live="polite" tabindex="-1" hidden></div>
+        </form>
+        </div>
+
+        <br><br>
+
         <div class = "Address">
             <h2>Our Address</h2>
             <p>
                 14 Kloof Street, Gardens, Cape Town, 8001
-                Maps: Google Maps
+                <br><a href="https://www.google.com/maps/search/?api=1&amp;query=14+Kloof+St+Gardens+Cape+Town+8001" target="_blank" rel="noopener noreferrer">Get directions on Google Maps</a>
             </p>
             </div>
             <br><br><br><br>
+
             <div class = "map">
            <figure class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10188.777375049134!2d18.409199332181224!3d-33.932578565618115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc676fd53c49f7%3A0x14538249c8fbbc5c!2s14%20Kloof%20St%2C%20Gardens%2C%20Cape%20Town%2C%208001!5e1!3m2!1sen!2sza!4v1786266366582!5m2!1sen!2sza"
+    <div id="leaflet-map" role="region" aria-label="Map showing Crumb &amp; Co. at 14 Kloof Street, Gardens"></div>
+    <noscript><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10188.777375049134!2d18.409199332181224!3d-33.932578565618115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc676fd53c49f7%3A0x14538249c8fbbc5c!2s14%20Kloof%20St%2C%20Gardens%2C%20Cape%20Town%2C%208001!5e1!3m2!1sen!2sza!4v1786266366582!5m2!1sen!2sza"
      width="1300" 
      height="450" 
      allowfullscreen="" 
      loading="lazy" 
      referrerpolicy="strict-origin-when-cross-origin">
-    </iframe>
-    <figcaption>View of our bakery on Google Maps</figcaption>
+    </iframe></noscript>
+    <figcaption>Find our bakery at 14 Kloof Street, Gardens</figcaption>
 </figure>
         </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 </body>
 </html>

@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/indexstyle.css">
-    <title> Crumb and Co | Home </title>
+    <meta name="description" content="Crumb &amp; Co. is a Cape Town cake bakery founded by chef Brian Mbuyezi. Handcrafted wedding, birthday and custom cakes and cupcakes, baked from scratch. Enquire today.">
+    <meta property="og:title" content="Crumb &amp; Co. | Custom, Wedding &amp; Birthday Cakes in Cape Town">
+    <meta property="og:description" content="Crumb &amp; Co. is a Cape Town cake bakery founded by chef Brian Mbuyezi. Handcrafted wedding, birthday and custom cakes and cupcakes, baked from scratch. Enquire today.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Crumb &amp; Co. | Custom, Wedding &amp; Birthday Cakes in Cape Town</title>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Bakery","name":"Crumb & Co.","description":"Cake bakery in Cape Town specialising in wedding, birthday and custom cakes and cupcakes.","telephone":"+27 123 456 789","email":"info@crumbandco.com","address":{"@type":"PostalAddress","streetAddress":"14 Kloof Street, Gardens","addressLocality":"Cape Town","postalCode":"8001","addressCountry":"ZA"},"openingHours":["Mo-Fr 09:00-17:00","Sa-Su 10:00-14:00"]}
+    </script>
 </head>
 <body>
    <div class="Start-section">
@@ -13,21 +19,23 @@
         <header>
             <nav>
     <div class="logo-group">
-        <img src="./assets/images/Screenshot 2026-08-13 140642.png" alt="Crumb&Co logo" class="logo-image">
+        <img src="./assets/images/Crumb&CoLogo.png" alt="Crumb&Co logo" class="logo-image">
         <span class = "bakery-name">Crumb&Co.</span>
     </div>
-    <div class="nav-links">
-        <a href="./index.html">HOME</a>|
-        <a href="./pages/products.html">PRODUCTS</a>|
-        <a href="./pages/enquire.html">ENQUIRIES</a>|
-        <a href="./pages/about.html">ABOUT US</a>|
-        <a href="./pages/services.html">SERVICES</a>|
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <div class="nav-links" id="nav-links">
+        <a href="./index.html">HOME</a>
+        <a href="./pages/products.html">PRODUCTS</a>
+        <a href="./pages/enquire.html">ENQUIRIES</a>
+        <a href="./pages/about.html">ABOUT US</a>
+        <a href="./pages/services.html">SERVICES</a>
         <a href="./pages/contact.html">CONTACT</a>
     </div>
 </nav>
         </header>
         <main>
             <div class = "header-content">
+                <h1 class="sr-only">Crumb &amp; Co. – Custom, Wedding and Birthday Cakes in Cape Town</h1>
                 <p>
                     <br>
                     Freshly baked for you:
@@ -51,7 +59,7 @@
             </div>
             <div class = "heading-buttons">
                 <a href = "./pages/enquire.html" class = "btn-enquire"> Enquire Now </a>
-                <a href = "./pages/services.html" class = "btn-contact"> Contact Us </a>
+                <a href = "./pages/contact.html" class = "btn-contact"> Contact Us </a>
                 </div>
                 <br>
         </main>
@@ -60,7 +68,7 @@
         <div class = "container">
         <div class = "top-row-content">
             <div class = "image-container">
-                <img src = "./assets/images/15833036185568328.jpg" style = "display: block; margin-left: auto; margin-right: auto; width: 50%; " class = "cake1">
+                <img src = "./assets/images/Chocolate_Cake_with donuts.jpg" alt="Chocolate cake with donuts" class="cake1" loading="lazy" decoding="async">
             </div>
             <div class = "hero-section-text-center">
             <span class = "heading-middle-text">
@@ -71,16 +79,16 @@
             </span>
                 </div>
                 <div class = "image-container">
-                <img src = "./assets/images/skyler-ewing-1R7Oevq7AEU-unsplash.jpg" style = "display: block; margin-left: auto; margin-right: auto; width: 50%;" class = "cake2">
+                <img src = "./assets/images/Chocolate_Cupcake.jpg" alt="Chocolate cupcake" class="cake2" loading="lazy" decoding="async">
                 </div>
                 </div>
 
                 <div class = "bottom-row-image-container">
                 <table>
                     <tr>
-                        <td><img src = "./assets/images/Black Forest Cheesecake.jpg" style = "display: block; margin-left: auto; margin-right: auto; width: 148%;" class = "cake3"></td>
-                        <td><img src = "./assets/images/anthony-espinosa-6iqpLKqeaE0-unsplash.jpg" style = "display: block; margin-left: auto; margin-right: auto; width: 32%;" class = "cake4"></td>
-                        <td><img src = "./assets/images/jr-r-90HdOlGbjck-unsplash.jpg" style = "display: block; margin-left: auto; margin-right: auto; width: 28%;" class = "cake5"></td>
+                        <td><img src = "./assets/images/Black Forest Cheesecake.jpg" alt="Black Forest cheesecake" class="cake3" loading="lazy" decoding="async"></td>
+                        <td><img src = "./assets/images/anthony-espinosa-6iqpLKqeaE0-unsplash.jpg" alt="Decorated celebration cake" class="cake4" loading="lazy" decoding="async"></td>
+                        <td><img src = "./assets/images/jr-r-90HdOlGbjck-unsplash.jpg" alt="Freshly baked cake from Crumb & Co." class="cake5" loading="lazy" decoding="async"></td>
                           </tr>
                 </table>
                 <br><br>
@@ -96,7 +104,7 @@
         </p>
         <div class = "btn-container">
             <p>Press here to view our cakes</p>
-            <a href = "#" class = "ordernow-btn"> Order Now</a>
+            <a href = "./pages/products.html" class = "ordernow-btn"> Order Now</a>
             </div>
         </div>
             </div>
@@ -104,11 +112,11 @@
 
     <div class = "products-section">
         <h1>What we have to offer</h1>
-        <br><br><br><br><br><br><br><br><br>
+        <br>
         <table>
             <tr>
                 <td class = "product-data-first-row">
-                <img src = "./assets/images/thomas-william-U7N6XFvTBjU-unsplash.jpg" class = "first cake" alt = "Custom Cakes" style = "display: block;  margin-right: auto; width: 50%;">
+                <img src = "./assets/images/thomas-william-U7N6XFvTBjU-unsplash.jpg" class = "first cake" alt = "Custom Cakes" loading="lazy" decoding="async">
                 <h3>Custom Cakes</h3>
                 <p>Try our custom cakes for a unique touch to your celebration.</p>
                 <a href = "./pages/products.html" class = "customcakes-btn">View Custom Cakes</a>
@@ -146,17 +154,18 @@
                     </div>
                     </td>
                 <td class = "product-data-second-row">
-                <img src = "./assets/images/mads-eneqvist-Xb5c2x6wJPc-unsplash.jpg" alt = "Wedding Cakes" style = "display: block;  margin-right: auto; width: 50%;">
+                <img src = "./assets/images/mads-eneqvist-Xb5c2x6wJPc-unsplash.jpg" alt = "Wedding Cakes" loading="lazy" decoding="async">
                 <h3>Wedding Cakes</h3>
                 <p>Our wedding cakes are designed to be the centerpiece of your special day.</p>
                 <a href = "./pages/products.html" class = "weddingcakes-btn">View Wedding Cakes</a>
+                </td>
                 </tr>
                 </table>
                
                 <br><br><br>
                 <div class = "product-data-bottom">
                     <div class = "first-bottom-content">
-                <img src = "./assets/images/duncan-kidd-qSPxjNn7Uy8-unsplash.jpg" alt = "Birthday Cakes" width="400px">
+                <img src = "./assets/images/duncan-kidd-qSPxjNn7Uy8-unsplash.jpg" alt = "Birthday Cakes" width="400px" loading="lazy" decoding="async">
                 <h3>Birthday Cakes</h3>
                 <p>Make your birthday extra special with our delicious birthday cakes.</p>
                 <a href = "./pages/products.html" class = "birthdaycakes-btn">View Birthday Cakes</a>
@@ -175,7 +184,7 @@
 
                 <div class = "second-bottom-content">
                     <div class = "image-content">
-                 <img src = "./assets/images/darko-trajkovic-IO4PaS3zYH0-unsplash.jpg" alt = "Cupcakes" width = "400px">
+                 <img src = "./assets/images/darko-trajkovic-IO4PaS3zYH0-unsplash.jpg" alt = "Cupcakes" width = "400px" loading="lazy" decoding="async">
                 <h3>Cupcakes</h3>
                 <p>Our cupcakes are perfect for any sweet tooth.</p>
                 <a href = "./pages/products.html" class = "cupcakes-btn">View Cupcakes</a>
@@ -189,6 +198,7 @@
                 </div>
                 </div>
     </div>
+    </div> <!-- closes products-section -->
     <br>
 
     <footer>
@@ -198,13 +208,15 @@
             <div class = "stars">
             <span>⭐⭐⭐⭐⭐</span>
             </div>
+            <div id="reviews-list" class="reviews-list">
             <p>"Crumb & Co. made my wedding cake, and it was absolutely stunning! The flavors were incredible, and the design was exactly what I wanted. Highly recommend!" - Sarah L.</p>
             <p>"I ordered a custom birthday cake for my son's party, and it was a hit! The kids loved it, and the adults couldn't stop raving about how delicious it was." - Mark T.</p>
             <p>"The cupcakes from Crumb & Co. are to die for! Perfectly moist and beautifully decorated. I'll definitely be ordering again." - Emily R.</p>
+            </div>
         </div>
 
             <div class = "contact">
-                <strong><h2>Contact Us</h2></strong>
+                <h2>Contact Us</h2>
                 <a href = "./pages/contact.html" class = "btn"> Contact Us </a>
             </div>
 
@@ -214,7 +226,6 @@
                 </div>
             </div>
     </footer>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js" defer></script>
 </body>
 </html>

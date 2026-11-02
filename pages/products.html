@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
-    <link rel = "stylesheet" href = "../assets/css/productsstyle.css">
-    <title>Crumbs & Co | Products</title>
+    <meta name="description" content="Browse wedding, birthday and custom cakes and cupcakes from Crumb &amp; Co. in Cape Town. Search our gallery and enquire online.">
+    <meta property="og:title" content="Cakes &amp; Cupcakes | Crumb &amp; Co. Cape Town">
+    <meta property="og:description" content="Browse wedding, birthday and custom cakes and cupcakes from Crumb &amp; Co. in Cape Town. Search our gallery and enquire online.">
+    <meta property="og:type" content="website">
+    <link rel = "stylesheet" href = "../assets/css/style.css">
+    <title>Cakes &amp; Cupcakes | Crumb &amp; Co. Cape Town</title>
 </head>
-<body>
+<body class = "Products-body">
     <div class = "start-section">
-        <div class = "header-image">
+        <div class = "products-header-image">
     <header>
         <nav>
             <div class="logo-group">
         <img src="../assets/images/Screenshot 2026-08-13 140642.png" alt="Crumb&Co logo" class="logo-image">
         <span class = "bakery-name">Crumb&Co.</span>
     </div>
-            <div class = "nav-links">
-        <a href = "../index.html" >HOME</a>|
-        <a href = "./products.html" >PRODUCTS</a>|
-         <a href = "./enquire.html" >ENQUIRIES</a>|
-        <a href = "./about.html" >ABOUT US</a>|
-        <a href = "./services.html" >SERVICES</a>|
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <div class="nav-links" id="nav-links">
+        <a href = "../index.html" >HOME</a>
+        <a href = "./products.html" >PRODUCTS</a>
+         <a href = "./enquire.html" >ENQUIRIES</a>
+        <a href = "./about.html" >ABOUT US</a>
+        <a href = "./services.html" >SERVICES</a>
         <a href = "./contact.html" >CONTACT</a>
     </div>
     </nav>
     </header>
 
     <main> <!--products page main -->
-        <div class = "header-content">
+        <div class = "pages-header-content">
             <div class = "header-logo">
             <img src="../assets/images/cake-symbol.png.svg" alt="Cake icon" class="heading-symbol">
             </div>
@@ -44,20 +48,32 @@
     </div>
 </div>
 <br><br>
-            <table class = "birthday-cakes" >
+            <div class="filter-bar" role="search">
+    <input type="search" id="search-input" placeholder="Search cakes (e.g. wedding, chocolate)…" aria-label="Search cakes">
+    <select id="category-filter" aria-label="Filter by category">
+        <option value="all">All cakes</option><option value="birthday">Birthday</option><option value="wedding">Wedding</option><option value="custom">Custom</option><option value="cupcake">Cupcakes</option>
+    </select>
+    <select id="sort-select" aria-label="Sort cakes">
+        <option value="default">Default order</option><option value="az">Name A–Z</option><option value="za">Name Z–A</option>
+    </select>
+</div>
+<p id="no-results" class="no-results" role="status" hidden>No cakes match your search. Try a different word.</p>
+<div id="product-list">
+<div class="product-category filter-item" data-category="birthday" data-name="Birthday Cakes" data-keywords="birthday party celebration fruit vegan fruitcake">
+<table class = "birthday-cakes" >
                 <tr class ="cake-product-container" >
                    <td class = "first-cake-row">
-                   <img src = "../assets/images/Cakes/BirthdayCakes/natallia-nagorniak-tA3sJ4u09eU-unsplash.jpg" >
-                   <img src = "../assets/images/Cakes/BirthdayCakes/Birthday Cake Lit With Lights, Birthday Cake, Hd Photography Photo, Food Background Image And Wallpaper for Free Download.jpg">
-                   <img src = "../assets/images/Cakes/BirthdayCakes/lan-gao-mo28-RNn8j4-unsplash.jpg">
+                   <img src = "../assets/images/Cakes/BirthdayCakes/natallia-nagorniak-tA3sJ4u09eU-unsplash.jpg" alt="Birthday cake example 1 by Crumb &amp; Co." loading="lazy" decoding="async">
+                   <img src = "../assets/images/Cakes/BirthdayCakes/Birthday Cake Lit With Lights, Birthday Cake, Hd Photography Photo, Food Background Image And Wallpaper for Free Download.jpg" alt="Birthday cake example 2 by Crumb &amp; Co." loading="lazy" decoding="async">
+                   <img src = "../assets/images/Cakes/BirthdayCakes/lan-gao-mo28-RNn8j4-unsplash.jpg" alt="Birthday cake example 3 by Crumb &amp; Co." loading="lazy" decoding="async">
                    </td>
                 </tr>
 
                 <tr>
                     <td class = "second-cake-row">
-                   <img src = "../assets/images/Cakes/BirthdayCakes/logan-clark--3ToavEs094-unsplash.jpg">
-                   <img src = "../assets/images/Cakes/BirthdayCakes/rakesh-sitnoor-_hz8MkLukqU-unsplash.jpg">
-                   <img src = "../assets/images/Cakes/BirthdayCakes/Vegan Fruitcake.jpg">
+                   <img src = "../assets/images/Cakes/BirthdayCakes/logan-clark--3ToavEs094-unsplash.jpg" alt="Birthday cake example 4 by Crumb &amp; Co." loading="lazy" decoding="async">
+                   <img src = "../assets/images/Cakes/BirthdayCakes/rakesh-sitnoor-_hz8MkLukqU-unsplash.jpg" alt="Birthday cake example 5 by Crumb &amp; Co." loading="lazy" decoding="async">
+                   <img src = "../assets/images/Cakes/BirthdayCakes/Vegan Fruitcake.jpg" alt="Birthday cake example 6 by Crumb &amp; Co." loading="lazy" decoding="async">
                     </td>
                 </tr>
                 <tr>
@@ -65,64 +81,62 @@
                             <div class="content-isolation-box">
                                 <h3>Birthday Cakes</h3>
                                 <p>Make your birthday extra special with our delicious birthday cakes.</p>
-                                <a href="./enquire.html" class="btn">Enquire</a>
+                                <a href="./enquire.html" class="btn-Enquire">Enquire</a>
                             </div>
                         </td>
                     </tr>
                 </table>
+</div>
 
-                 <tr class="table-spacer-row">
-                    <td colspan="2">
-
-                     </td> <!-- This creates an empty bridge row -->
-                    </tr>
-
-            <div class = "wedding-product-container">
-                <div class = "product-section">
-                    <img src = "../assets/images/Cakes/WeddingCakes/10 Breathtaking Blue Wedding Cake Ideas You’ll….jpg"width = "20%">
-                    <img src = "../assets/images/Cakes/WeddingCakes/15 Gorgeous Rose Cake Ideas – Including Stunning Ombre Designs.jpg"width = "20%">
-                    <img src = "../assets/images/Cakes/WeddingCakes/15692298698839631.jpg"width = "20%">
-                    <img src = "../assets/images/Cakes/WeddingCakes/2603712282745676.jpg"width = "20%">
-                    <img src = "../assets/images/Cakes/WeddingCakes/4433299630679204.jpg"width = "20%">
-                    <img src = "../assets/images/Cakes/WeddingCakes/david-holifield-7ePjhwxtxCU-unsplash.jpg"width = "20%"> 
+            <div class="wedding-product-container product-category filter-item" data-category="wedding" data-name="Wedding Cakes" data-keywords="wedding tiered blue rose ombre">
+                <div class = "products-section2 ">
+                    <img src = "../assets/images/Cakes/WeddingCakes/10 Breathtaking Blue Wedding Cake Ideas You’ll….jpg" alt="Wedding cake example 1 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/WeddingCakes/15 Gorgeous Rose Cake Ideas – Including Stunning Ombre Designs.jpg" alt="Wedding cake example 2 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/WeddingCakes/15692298698839631.jpg" alt="Wedding cake example 3 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/WeddingCakes/2603712282745676.jpg" alt="Wedding cake example 4 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/WeddingCakes/4433299630679204.jpg" alt="Wedding cake example 5 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/WeddingCakes/david-holifield-7ePjhwxtxCU-unsplash.jpg" alt="Wedding cake example 6 by Crumb &amp; Co." loading="lazy" decoding="async"> 
                     <div class = "button-section">  
                     <h3>Wedding Cakes</h3>
                     <p>Our wedding cakes are designed to be the centerpiece of your special day.</p>
-                    <a href = "./enquire.html" class = "btn">Enquire</a>
+                    <a href = "./enquire.html" class = "btn-Enquire">Enquire</a>
                     </div>
                     <br><br>
                 </div>
                 </div>
                 
-            <div class = "custom-product-section">
-                <div class = "product-section">
-                    <img src = "../assets/images/Cakes/CustomCakes/4 Ingredient Healthier Chocolate Cake.jpg"width = "50%">
-                    <img src = "../assets/images/Cakes/CustomCakes/47710077300360806.jpg"width = "50%">
-                    <img src = "../assets/images/Cakes/CustomCakes/Custom cakes for every occasion 🌹   DM to enquire….jpg"width = "50%">
-                    <img src = "../assets/images/Cakes/CustomCakes/david-holifield-7u_PvjPWLPU-unsplash.jpg"width = "50%">
-                    <img src = "../assets/images/Cakes/CustomCakes/kaouther-djouada-hcEDfkiVmMI-unsplash.jpg"width = "50%">
-                    <img src = "../assets/images/Cakes/CustomCakes/Oreo Cake.jpg">
+            <div class="custom-product-section product-category filter-item" data-category="custom" data-name="Custom Cakes" data-keywords="custom bespoke chocolate oreo healthier">
+                <div class = "products-section2">
+                    <img src = "../assets/images/Cakes/CustomCakes/4 Ingredient Healthier Chocolate Cake.jpg" alt="Custom cake example 1 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/CustomCakes/47710077300360806.jpg" alt="Custom cake example 2 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/CustomCakes/Custom cakes for every occasion 🌹   DM to enquire….jpg" alt="Custom cake example 3 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/CustomCakes/david-holifield-7u_PvjPWLPU-unsplash.jpg" alt="Custom cake example 4 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/CustomCakes/kaouther-djouada-hcEDfkiVmMI-unsplash.jpg" alt="Custom cake example 5 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/CustomCakes/Oreo Cake.jpg" alt="Custom cake example 6 by Crumb &amp; Co." loading="lazy" decoding="async">
                      <div class = "button-section"> 
                     <h3>Custom Cakes</h3>  
                     <p>Order a custom cake for any occasion, tailored to your specifications.</p> 
-                    <a href = "./enquire.html" class = "btn">Enquire</a>
+                    <a href = "./enquire.html" class = "btn-Enquire">Enquire</a>
                      </div>
                     <br><br>
                 </div>
-            <div class = "cupcakes-product-setion">
-                <div class = "product-section">
-                    <img src = "../assets/images/Cakes/CupCakes/341781059235484051.jpg"width = "50%">
-                    <img src = "../assets/images/Cakes/CupCakes/7 Irresistible Cupcake Recipes That Will Sell Out at Your Bake Sale.jpg"width = "50%">
-                    <img src = "../assets/images/Cakes/CupCakes/985231164201079.jpg"width = "50%">
-                    <img src = "../assets/images/Cakes/CupCakes/Chocolate Cupcake Aesthetic _ Cozy Dessert Photography 🍫🧁 (1).jpg"width = "50%">   
-                    <img src = "../assets/images/Cakes/CupCakes/Chocolate Chip Banana Cupcakes with Peanut butter Frosting.jpg"width = "50%">
-                    <img src = "../assets/images/Cakes/CupCakes/The Best Chocolate Cupcakes.jpg"width = "50%">
+            </div>
+            <div class="cupcakes-product-setion product-category filter-item" data-category="cupcake" data-name="Cupcakes" data-keywords="cupcake chocolate banana peanut butter frosting">
+                <div class = "products-section2">
+                    <img src = "../assets/images/Cakes/CupCakes/341781059235484051.jpg" alt="Cupcakes example 1 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/CupCakes/7 Irresistible Cupcake Recipes That Will Sell Out at Your Bake Sale.jpg" alt="Cupcakes example 2 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/CupCakes/985231164201079.jpg" alt="Cupcakes example 3 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/CupCakes/Chocolate Cupcake Aesthetic _ Cozy Dessert Photography 🍫🧁 (1).jpg" alt="Cupcakes example 4 by Crumb &amp; Co." loading="lazy" decoding="async">   
+                    <img src = "../assets/images/Cakes/CupCakes/Chocolate Chip Banana Cupcakes with Peanut butter Frosting.jpg" alt="Cupcakes example 5 by Crumb &amp; Co." loading="lazy" decoding="async">
+                    <img src = "../assets/images/Cakes/CupCakes/The Best Chocolate Cupcakes.jpg" alt="Cupcakes example 6 by Crumb &amp; Co." loading="lazy" decoding="async">
                      <div class = "button-section"> 
                     <h3>Cupcakes</h3>
                     <p>Our cupcakes are perfect for any sweet tooth.</p>
-                    <a href = "./enquire.html" class = "btn">Enquire</a>
+                    <a href = "./enquire.html" class = "btn-Enquire">Enquire</a>
                      </div>
                 </div>
             </div>
+</div> <!-- /product-list -->
+<script src="../assets/js/main.js" defer></script>
 </body>
 </html>
