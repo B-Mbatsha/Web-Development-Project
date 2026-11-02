@@ -152,7 +152,7 @@ W3Schools, 2026. HTML tutorial. [online] Available at: <https://www.w3schools.co
 
 =============================================================================================================================
 # Part 2
-
+## Changelog
 ### Modern Layout Architectures
 • Transition to CSS Grid: Structural HTML table dependencies were removed from the product and service galleries. These were replaced with modern CSS Grid layouts (display: grid) to allow items to wrap and align automatically based on screen space.
 • Standardised Component Cards: A modular card class (.item-card) was established. This ensures all dynamically loaded products or services maintain identical padding, borders, and height alignment.
