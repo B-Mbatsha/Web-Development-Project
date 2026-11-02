@@ -151,7 +151,7 @@ Reference list
 W3Schools, 2026. HTML tutorial. [online] Available at: <https://www.w3schools.com/html/> [Accessed 13 August 2026].
 =============================================================================================================================
 # Part 2
-Changelog
+## Changelog
 Design Tokens, Variables & Global Reset
 • Fixed Token Consistency: Audited root variables and fixed formatting bugs (e.g., standardizing custom properties like --Dark-brown to follow clean naming conventions).
 • Enhanced Focus States: Implemented high-visibility global focus rings (:focus-visible) across all interactive elements (a, button, input, etc.) using --honey-gold to improve accessibility and keyboard navigation.
@@ -189,7 +189,7 @@ Reference list
 W3Schools, 2026. HTML tutorial. [online] Available at: <https://www.w3schools.com/html/> [Accessed 18 September 2026].
 =============================================================================================================================
 # Part 3
-Changelog
+## Changelog
 JavaScript Changelog – Crumb & Co.
 Navigation
 •	Added a mobile menu button (☰ / ✕) that opens and closes the navigation links on small screens.
