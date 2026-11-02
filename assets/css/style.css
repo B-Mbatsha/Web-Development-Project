@@ -588,7 +588,7 @@ footer {
 }
 
 .wedding-product-container {
-   background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/chocolate with nuts.jpg");
+   background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/Chocolate\ raspberry\ cake🍒❤️🍰.jpg");
    }
 
 .custom-product-section { 
@@ -746,6 +746,11 @@ figure img {
   margin: 0 auto; 
   border-radius: 15px;
  }
+ about-us-section figure img {
+  transition: transform .4s ease, box-shadow .4s ease;
+  position: relative;      /* lets the image sit above the text around it */
+  z-index: 1;
+}
 
 .services-container ul { 
   list-style: none; 
@@ -789,12 +794,20 @@ figure img {
   border: 3px solid burlywood; 
   border-radius: var(--radius);
  }
+ 
+ @media (hover: hover) {    /* only on devices that have a mouse */
+  .about-us-section figure img:hover {
+    transform: scale(1.25);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .6);
+  }
+}
 
 .map-container figcaption { 
   margin-top: 8px; 
   color: var(--warm-esspresso); 
   font-weight: bold;
  }
+
 
 /* ---------- 8. Interactive elements ---------- */
 .accordion-btn {
@@ -925,7 +938,7 @@ figure img {
   .image-container img { 
     height: 300px;
    }
-   
+
   .products-section > table tbody, .product-data-bottom { grid-template-columns: 1fr; }
   .heading-content { margin: 0 20px; }
 }
