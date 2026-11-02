@@ -149,7 +149,7 @@ Business Research, 57: 787–794.
 Part1
 Reference list
 W3Schools, 2026. HTML tutorial. [online] Available at: <https://www.w3schools.com/html/> [Accessed 13 August 2026].
-----------------------------------------------------------------------------------------------------------------------------------------------------
+=============================================================================================================================
 Part 2
 Changelog
 Design Tokens, Variables & Global Reset
@@ -187,7 +187,7 @@ Mobile & Component-Level Responsiveness
 Part2
 Reference list
 W3Schools, 2026. HTML tutorial. [online] Available at: <https://www.w3schools.com/html/> [Accessed 18 September 2026].
-----------------------------------------------------------------------------------------------------------------------------------------------------
+=============================================================================================================================
 Part 3
 Changelog
 JavaScript Changelog – Crumb & Co.
