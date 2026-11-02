@@ -171,11 +171,20 @@ W3Schools, 2026. HTML tutorial. [online] Available at: <https://www.w3schools.co
 • Lightbox and Accordion Frameworks: Styles were established to support functional layout components, including smooth dropdown accordions and a centered lightbox layer for viewing expanded product photos.
 • Motion Reduction Support: A @media (prefers-reduced-motion) query block was introduced. This automatically disables structural animations and keyframes if a visitor has motion-reduction enabled on their device.
 
-28August: added css files
-10September: wrote css files code
-13September: edited css code
-15September:edited and fine tuned css code
-18September: made final changes for part 2
+##Changes made 
+The stylesheet was rewritten to make the whole website responsive and easier to maintain. A reset was added with box-sizing: border-box and images set to max-width: 100%, so sizes behave the same in every browser. Colours and the border radius were moved into variables in :root, so they can be changed in one place. Typography was updated to use Georgia with a comfortable line height, and the headings now use clamp() so they scale with the screen size.
+
+The page headers were simplified. All six header images now share one set of styles, and each page only sets its own picture and height. A dark layer was added over the images so the text is easier to read. The navigation was rebuilt with flexbox. The “|” characters between the links were replaced with border lines, and hover, focus and current-page colours were added. On screens 768px wide or smaller, a menu button appears and opens a dropdown list of links.
+
+Many elements had been positioned with fixed translateX pixel values, which broke when the window was resized. These were removed from the About, Services and Contact titles, the home page sections and the footer. They were replaced with margin: auto, width: min(), flexbox and CSS Grid. On the home page, the three-column image row and the product tables now use Grid and turn into one column at 900px. The footer uses flexbox with wrapping so it stacks neatly on small screens.
+
+All the buttons now share one style, with a dark brown background and wheat text. This fixed the “Enquire Now” button, which had light text on a light background. Hover, active and transition effects were also added. On the products page, the gallery images were made square with a zoom effect on hover, and the custom cakes section was given a dark background so its text could be read. The wedding and cupcake backgrounds were set to cover their sections.
+
+The forms were styled with clear fields, a gold border on focus, a red border on invalid fields and an error message under each field. A response box with green and yellow status colours was added for the messages shown after a form is sent. The About, Services and Contact pages were put in centred boxes with a maximum width, and the Leaflet map was set to 450px tall (340px on phones).
+
+Styles were added for the new JavaScript features: the accordion on the Services page, the photo lightbox with close, previous and next buttons, and the fade-in effect when scrolling. The fadeIn and fadeDown animations were created for these. For accessibility, a gold :focus-visible outline was added for keyboard users, and a prefers-reduced-motion rule turns animations off for people who are sensitive to motion.
+
+Finally, media queries were added at 1024px, 900px, 768px, 480px and 1600px, so the layout goes from several columns to one on smaller screens and the text gets larger on very big screens. Some mistakes in the old CSS were also corrected: 0.3 ease was changed to .3s ease, var(--Honey-gold) was changed to var(--honey-gold), and the invalid translate(20) rule was removed.
 
 Part2
 Reference list
