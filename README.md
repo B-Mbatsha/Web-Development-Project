@@ -152,32 +152,24 @@ W3Schools, 2026. HTML tutorial. [online] Available at: <https://www.w3schools.co
 
 =============================================================================================================================
 # Part 2
-## Changelog
-Design Tokens, Variables & Global Reset
-• Fixed Token Consistency: Audited root variables and fixed formatting bugs (e.g., standardizing custom properties like --Dark-brown to follow clean naming conventions).
-• Enhanced Focus States: Implemented high-visibility global focus rings (:focus-visible) across all interactive elements (a, button, input, etc.) using --honey-gold to improve accessibility and keyboard navigation.
-• Scroll & Performance Reset: Forced smooth native behavior onto the HTML element and applied an explicit overflow-x: hidden to the body layout to natively squash any future horizontal scrolling or accidental overflow issues on mobile views.
 
-Typography & Layout Scaling
-• Fluid Font Scaling: Refactored static structural sizing rules across all major headings (h1 through h3) using fluid clamp() functions. Titles now scale smoothly between mobile viewports and wide monitors without relying on a massive list of media query overwrites.
+### Modern Layout Architectures
+• Transition to CSS Grid: Structural HTML table dependencies were removed from the product and service galleries. These were replaced with modern CSS Grid layouts (display: grid) to allow items to wrap and align automatically based on screen space.
+• Standardised Component Cards: A modular card class (.item-card) was established. This ensures all dynamically loaded products or services maintain identical padding, borders, and height alignment.
 
-Navigation & Header Overhaul
-• Isolated Page Headers: Created tailored linear-gradient and background-image rules across all layout structures (.products-header-image, .Enquires-header-image, etc.) to give each sub-page its own unique header identity.
-• Flexbox Navigation Layout: Reworked the main nav element into a responsive Flexbox wrapper with automatic spacing boundaries, ensuring the brand logo stays fixed left while standard page anchors cleanly align right.
+### Responsive Design & Mobile Optimization
+• Fluid Typography: Static font sizes for headings (h1 through h3) were replaced with fluid sizing using the CSS clamp() function. Text now scales smoothly between mobile viewports and large desktop monitors.
+• Viewport Overflow Fix: Applied overflow-x: hidden to the global body setup. This eliminates unwanted horizontal scrolling on mobile touchscreens.
+• Optimized Form Inputs: Input fields, text areas, and submission buttons inside the contact forms were updated to scale up to 100% width on smaller screens, making mobile tap targets easier to use.
 
-Interactive Components & Animations
-• Accessible Accordion Modules: Added clean .open class transitions to target accordion instances natively via .panel displays, including a smooth fadeDown keyframe entry mechanism.
-• Lightbox Utility Layer: Structured a fully absolute-centered utility layer (.lightbox) with dedicated pagination overrides (.lb-prev, .lb-next, .lb-close) to handle full-screen image previews.
-• Motion Reduction Support: Baked in a direct @media (prefers-reduced-motion: reduce) media rule block to respect device-level animation overrides by stripping structural keyframes and layout transitions globally for users who need it.
+### Navigation & Header Enhancements
+• Distinct Page Branding: Individual header classes were configured for the sub-pages (About, Services, Contact, and Enquiries). Each page now successfully displays its own dedicated background image and linear gradient overlay.
+• Flexbox Menu Alignment: The main navigation element was rebuilt using Flexbox to keep the bakery logo securely fixed on the left and the page links neatly grouped on the right.
 
-Layout Engine Modernization (No More Table Layouts)
-• Replaced Structural Tables: Stripped out dependencies on standard structural HTML tables for page-wide section layouts.
-• Native Grid Implementations: Replaced table boundaries with modern CSS Grid models (grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))) to handle dynamic product galleries and responsive service sections cleanly.
-• Clean Card Ecosystem: Set up an explicit flex-column card architecture (.item-card) featuring independent internal components (.item-tag, .item-description, .item-footer) so every dynamically injected service or product card matches perfectly in height and flow.
-
-Mobile & Component-Level Responsiveness
-• Refined Mobile Overrides: Consolidated media layout break points down to clean, standardized thresholds (1024px, 900px, 768px, and 480px).
-• Adaptive Form Controls: Configured input structures (.field input, select, textarea) inside form elements (.enquiry-form, .contact-form) to stretch to a fluid 100% width on ultra-small screens while scaling buttons to full width to make mobile submissions effortless.
+### Interactive Elements & Accessibility
+• Accessible Focus States: High-visibility focus indicators (:focus-visible) were integrated across all links and buttons to support keyboard-only navigation.
+• Lightbox and Accordion Frameworks: Styles were established to support functional layout components, including smooth dropdown accordions and a centered lightbox layer for viewing expanded product photos.
+• Motion Reduction Support: A @media (prefers-reduced-motion) query block was introduced. This automatically disables structural animations and keyframes if a visitor has motion-reduction enabled on their device.
 
 28August: added css files
 10September: wrote css files code
@@ -198,7 +190,7 @@ Navigation
 •	The menu closes when Escape is pressed or when the window is resized back to desktop width.
 •	The link for the current page is now marked and highlighted automatically.
 
-Forms: validation
+### Forms: validation
 •	Added client-side validation to the enquiry and contact forms, using novalidate so custom error messages show instead of browser pop-ups.
 •	Validation rules added:
 ◦	Name: 2–60 letters, no numbers.
@@ -211,21 +203,21 @@ Forms: validation
 ◦	Delivery: blocked with a message, since delivery is “coming soon”.
 •	Fields are checked when the user leaves them. Errors clear live as the user corrects them, and the first invalid field is focused on submit.
 
-Forms: processing
+### Forms: processing
 •	Enquiry form: once valid, shows a response with an estimated price (price × size × quantity), availability, and pickup hours for the chosen day (weekday or weekend).
 ◦	Rush orders (2 days or less) add a 25% fee.
 ◦	Wedding cakes need at least 14 days’ notice.
 ◦	The date picker’s earliest date is set to tomorrow.
 •	Contact form: builds the email (To, Subject, Body), shows a preview, and provides a button that opens the visitor’s email app.
 
-EmailJS integration
+### EmailJS integration
 •	Both forms now send their details to the business email through the EmailJS REST API, using fetch() in the background (AJAX).
 •	Added settings for the Public Key, Service ID and two Template IDs.
 •	Added sendToEmailJS() and emailjsIsSetUp(), which handle the request and status messages (“Sending…”, success, failure).
 •	The submit button is disabled while sending, to prevent double submissions.
 •	If EmailJS is not configured or the request fails, a backup “email us instead” link is shown, so no enquiry is lost.
 
-Interactive elements
+### Interactive elements
 •	Accordion: on the Services page: each service is a button that expands and collapses its description.
 •	Lightbox (modal): on the Products page:
 ◦	Photos open in a larger view when clicked or when Enter is pressed.
@@ -233,28 +225,28 @@ Interactive elements
 ◦	Focus returns to the clicked photo on close.
 •	Interactive map: on the Contact page, using Leaflet and OpenStreetMap, with a marker and popup for 14 Kloof Street. Scroll-zoom is enabled only after clicking the map, so page scrolling isn’t hijacked. A message is shown if the library fails to load.
 
-Dynamic content and search
+### Dynamic content and search
 •	Customer reviews on the home page are now loaded from a JavaScript array. They rotate every 8 seconds with a fade, and there’s a “Next review” button.
 •	Products page: added live search, a category filter (birthday, wedding, custom, cupcakes) and sorting (default, A–Z, Z–A), plus a “no results” message.
 •	Services page: added live search and sorting.
 
-Animations and transitions
+### Animations and transitions
 •	Sections fade in as they scroll into view, using IntersectionObserver.
 •	Animations are skipped for users who have “reduce motion” turned on.
 
-Security and accessibility
+### Security and accessibility
 •	All user-entered text is inserted with textContent rather than innerHTML, so it can’t be run as HTML.
 •	Added ARIA attributes (aria-expanded, aria-invalid, aria-current, dialog labels) and keyboard support for the menu, gallery and accordion.
 
-Code structure
+### Code structure
 •	The script was rewritten in a simpler style: plain functions, var, loops and if statements, with comments explaining each section.
 
-Testing
+### Testing
 •	Tested at screen widths of 360, 768, 1280 and 1920 px with no horizontal scrolling and no console errors.
 •	Tested validation, price and availability responses, the accordion, search, lightbox and mobile menu.
 •	Tested EmailJS success, failure behaviour.
 
-Notes
+### Notes
 •	Prices in the settings are placeholders and must be replaced with real prices.
 •	The EmailJS keys must be added before automatic sending works.
 
